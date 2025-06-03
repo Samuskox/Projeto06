@@ -65,7 +65,20 @@ public class MultiplyingExpr extends BinaryExpr {
         
         // <editor-fold defaultstate="collapsed" desc="Implementação">
                     
-        // sua implementação aqui
+        Expression leftOperand = getLeftOperand();
+        Expression rightOperand = getRightOperand();
+        Symbol operatorSym = getOperator().getSymbol();
+
+        leftOperand.emit();
+        rightOperand.emit();
+
+        if ( operatorSym == Symbol.times) {
+            emit( "MUL" );
+        } else if ( operatorSym == Symbol.divide) {
+            emit( "DIV" );
+        } else if (operatorSym == Symbol.modRW){
+            emit("MOD");
+        }
 
         // </editor-fold>
         
