@@ -20,9 +20,11 @@ public class WritelnStmt extends OutputStmt {
     
     @Override
     public void emit() throws CodeGenException {
-        
+         
         // <editor-fold defaultstate="collapsed" desc="Implementação">
-                    
+        super.emit();
+        emit("PUTEOL");
+        
         // sua implementação aqui
 
         // </editor-fold>

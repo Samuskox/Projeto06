@@ -55,8 +55,29 @@ public class NotExpr extends UnaryExpr {
     @Override
     public void emit() throws CodeGenException {
         
+        //  Expression leftOperand = getLeftOperand();
+        // Expression rightOperand = getRightOperand();
+        // Symbol operatorSym = getOperator().getSymbol();
+
+        // leftOperand.emit();
+        // rightOperand.emit();
+
+        // if ( operatorSym == Symbol.plus ) {
+        //     emit( "ADD" );
+        // } else if ( operatorSym == Symbol.minus ) {
+        //     emit( "SUB" );
+        // }
         // <editor-fold defaultstate="collapsed" desc="Implementação">
                     
+        Expression operand = getOperand();
+        Symbol operator = getOperator().getSymbol();
+
+        operand.emit();
+
+        if(operator == Symbol.notRW){
+            emit("NOT");
+        }
+
         // sua implementação aqui
 
         // </editor-fold>

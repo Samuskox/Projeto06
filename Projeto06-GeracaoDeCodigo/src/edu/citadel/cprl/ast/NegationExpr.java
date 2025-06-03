@@ -57,7 +57,7 @@ public class NegationExpr extends UnaryExpr {
     public void emit() throws CodeGenException {
         
         // <editor-fold defaultstate="collapsed" desc="Implementação">
-                    
+        
         // sua implementação aqui
 
         // </editor-fold>
