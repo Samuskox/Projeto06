@@ -58,7 +58,14 @@ public class NegationExpr extends UnaryExpr {
         
         // <editor-fold defaultstate="collapsed" desc="Implementação">
                     
-        // sua implementação aqui
+        Expression operand = getOperand();
+        Symbol operatorSymbol = getOperator().getSymbol();
+
+        operand.emit();
+
+        if(operatorSymbol == Symbol.plus || operatorSymbol == Symbol.minus){
+            emit("NOT");
+        }
 
         // </editor-fold>
         
